@@ -3,21 +3,17 @@ body{
     margin: 0;
     position:relative;
     flex-direction: column;
+}
 
-}
-header{
-    padding: 1rem;
-    text-align: center;
-}
 
 @media(max-width:600px){
     body{
-        font-size:24px;
+        font-size:16px;
         background-color: rgb(123,44,191);
         display: inline-block;
     }
     .ma-colonne{
-        width:80%;
+        width:600%;
     }
 }
 
@@ -126,9 +122,9 @@ a:hover{
  p{
     color: black;
     text-align: center;
-    box-shadow: 20%;
+    box-shadow:20%;
     border-radius: 10px;
-
+    width: 50%;
  }
 
 
