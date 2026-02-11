@@ -11,6 +11,9 @@ body{
         font-size:16px;
         background-color: rgb(123,44,191);
     }
+    .ma-colonne{
+        width:100%;
+    }
 }
 
 nav{
