@@ -17,20 +17,10 @@ header{
         display: inline-block;
     }
     .ma-colonne{
-        width:60%;
+        width:80%;
     }
 }
 
-@media(max-width:768px){
-    .cc,.avatar,.monblock{
-        display:flex;
-        flex-direction: column !important;
-    }
-      {
-    max-width: 100vw;
-    box-sizing: border-box;
-}
-}
 
 
 
