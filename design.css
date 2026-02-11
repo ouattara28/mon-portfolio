@@ -5,16 +5,34 @@ body{
     flex-direction: column;
 
 }
+header{
+    padding: 1rem;
+    text-align: center;
+}
 
 @media(max-width:600px){
     body{
-        font-size:16px;
+        font-size:24px;
         background-color: rgb(123,44,191);
+        display: inline-block;
     }
     .ma-colonne{
         width:60%;
     }
 }
+
+@media(max-width:768px){
+    .cc,.avatar,.monblock{
+        display:flex;
+        flex-direction: column !important;
+    }
+      {
+    max-width: 100vw;
+    box-sizing: border-box;
+}
+}
+
+
 
 nav{
     background-color:rgb(75,30,109);
@@ -28,18 +46,19 @@ nav{
     border: 20px;
 }
 
+
 h1{
     font-family: "Comic Sans MS";
     font-style: italic;
 }
 
-#cc{
+.cc{
     display: flex;
     flex-direction: row;
     gap: 30px;
 }
 
-#moi{
+.moi{
     text-align: left;
     color: white;
     font-size: 2rem;
@@ -48,9 +67,10 @@ h1{
 
 .nom{
     color: violet;
+
 }
 
-#mo{
+.mo{
     text-align: left;
     color: skyblue;
 }
@@ -118,6 +138,7 @@ a:hover{
     text-align: center;
     box-shadow: 20%;
     border-radius: 10px;
+
  }
 
 
