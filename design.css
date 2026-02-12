@@ -1,179 +1,171 @@
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
 body{
     background: rgb(123,44,191);
-    margin: 0;
-    position:relative;
-    flex-direction: column;
+    font-family: Arial, sans-serif;
 }
 
-
-@media(max-width:600px){
-    body{
-        font-size:16px;
-        background-color: rgb(123,44,191);
-        display: inline-block;
-    }
-    .ma-colonne{
-        width:60%;
-    }
-}
-
-
-
-
+/* NAVIGATION */
 nav{
-    background-color:rgb(75,30,109);
-    margin: 0%;
-    padding: 10px;
-    gap: 30px;
+    background-color: rgb(75,30,109);
+    padding: 15px;
     display: flex;
-    align-items: center;
     justify-content: center;
-    gap: 70px;
-    border: 20px;
+    gap: 40px;
+    flex-wrap: wrap;
 }
 
-
-h1{
-    font-family: "Comic Sans MS";
-    font-style: italic;
+nav a{
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
 }
 
+nav a:hover{
+    transform: scale(1.1);
+    background-color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* SECTION PRINCIPALE */
 .cc{
     display: flex;
-    flex-direction:row;
-    gap: 30px;
     justify-content: center;
     align-items: center;
+    gap: 40px;
+    padding: 40px 20px;
+    flex-wrap: wrap;
 }
 
+/* TEXT */
 #moi{
-    text-align: left;
     color: white;
     font-size: 2rem;
-
 }
 
 .nom{
     color: violet;
-
 }
 
 #mo{
-    text-align: left;
     color: skyblue;
 }
 
+.block{
+    border: 2px dashed violet;
+    border-radius: 4px;
+    padding: 10px 20px;
+    display: inline-block;
+    margin: 10px 0;
+}
+
+/* BOUTON */
 .btn-download{
     background-color: #6a0dad;
     color: white;
-    padding: 2px 2px;
+    padding: 10px 15px;
     text-decoration: none;
     border-radius: 5px;
     display: inline-flex;
     align-items: center;
     gap: 5px;
-    font-family: sans-serif;
+    margin-top: 10px;
 }
 
 .btn-download:hover{
     background-color: #5a0bb5;
 }
-.block{
-    border: 2px dashed;
-    border-radius: 4px;
-   display: inline-block;
-    padding: 10px 20px;
-    color: violet;
-    align-items: center;
-}
 
-.avatar{
-    flex: 1;
-    display: flex;
-    justify-content: space-between;
-    align-items:center;
-
-}
-
-img{
-    opacity: 0.7;
-    background-color: transparent;
-}
+/* IMAGE */
 .avatar img{
-    width: 400px;
-    height: auto;
-    border-radius: 30px;
+    width: 100%;
+    max-width: 350px;
+    border-radius: 20px;
 }
 
-a{
-    display: inline;
+/* RESEAUX */
+#rs{
+    background-color: violet;
+    display: flex;
     justify-content: center;
-    padding:10px 0;
-    text-decoration: none;
-    transition: 0.3s;
-    color:white;
-    border-radius: 5px;
+    gap: 40px;
+    padding: 20px;
+    flex-wrap: wrap;
 }
 
-a:hover{
-    transform: scale(1.1SS);
-    border-color: aliceblue;
-    background-color: black;
+#rs img{
+    width: 50px;
+    transition: transform 0.3s;
 }
 
+#rs img:hover{
+    transform: scale(1.2);
+}
 
- p{
-    color: black;
-    text-align: center;
-    box-shadow:20%;
-    border-radius: 10px;
-    width: 50%;
- }
-
-
- .monblock{
-    max-width: 3000px;
-    margin: 50px;
+/* MA VISION */
+.monblock{
+    margin: 30px 20px;
     padding: 30px;
     background-color: white;
     border-radius: 15px;
-    box-shadow: 0 5px rgba(0, 0, 0,0,2);
- }
+}
+
+.monblock p{
+    text-align: center;
+    width: 100%;
+}
+
+/* TITRES */
+h1{
+    font-family: "Comic Sans MS";
+    font-style: italic;
+}
 
 h2{
     background-color: darkviolet;
     text-align: center;
-}
-
-#rs{
-    background-color: violet;
-    display: flex;
-    gap: 100px;
-    margin: 20px 0;
-    align-items: center;
-    justify-content: center;
-
-
-    color: transparent;
-}
-#rs img{
-    width:60px;
-    height: auto;
-    transition: transform 0.3s;
-
-}
-
-
-.hg{
-   width: 50%;
-  }
-
-
-h3{
+    padding: 10px;
     color: white;
 }
 
-ul{
-    color: black;
+h3{
+    color: white;
+    text-align: center;
+    margin-top: 20px;
 }
+
+ul{
+    padding: 20px;
+    margin: 0 20px 40px;
+    background: white;
+    border-radius: 10px;
+}
+
+/* RESPONSIVE MOBILE */
+@media (max-width: 768px){
+
+    .cc{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #moi{
+        font-size: 1.5rem;
+    }
+
+    nav{
+        gap: 20px;
+    }
+
+    .avatar img{
+        max-width: 250px;
+    }
+}
+
 
