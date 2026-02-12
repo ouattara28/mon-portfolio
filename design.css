@@ -1,16 +1,21 @@
+/* ===================== */
 /* RESET */
+/* ===================== */
 *{
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 body{
     background: rgb(123,44,191);
     font-family: Arial, sans-serif;
+    line-height: 1.6;
 }
 
+/* ===================== */
 /* NAVIGATION */
+/* ===================== */
 nav{
     background-color: rgb(75,30,109);
     padding: 15px;
@@ -24,26 +29,34 @@ nav a{
     color: white;
     text-decoration: none;
     transition: 0.3s;
+    padding: 5px 10px;
 }
 
 nav a:hover{
     transform: scale(1.1);
     background-color: black;
-    padding: 5px 10px;
     border-radius: 5px;
 }
 
+/* ===================== */
 /* SECTION PRINCIPALE */
+/* ===================== */
 .cc{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 40px;
-    padding: 40px 20px;
+    gap: 60px;
+    padding: 50px 20px;
     flex-wrap: wrap;
 }
 
 /* TEXT */
+h1{
+    font-family: "Comic Sans MS";
+    font-style: italic;
+    color: white;
+}
+
 #moi{
     color: white;
     font-size: 2rem;
@@ -63,6 +76,7 @@ nav a:hover{
     padding: 10px 20px;
     display: inline-block;
     margin: 10px 0;
+    color: violet;
 }
 
 /* BOUTON */
@@ -76,25 +90,36 @@ nav a:hover{
     align-items: center;
     gap: 5px;
     margin-top: 10px;
+    transition: 0.3s;
 }
 
 .btn-download:hover{
     background-color: #5a0bb5;
 }
 
+/* ===================== */
 /* IMAGE */
-.avatar img{
-    width: 100%;
-    max-width: 350px;
-    border-radius: 20px;
+/* ===================== */
+.avatar{
+    display: flex;
+    justify-content: center;
 }
 
-/* RESEAUX */
+.avatar img{
+    width: 100%;
+    max-width: 400px;
+    border-radius: 20px;
+    opacity: 0.9;
+}
+
+/* ===================== */
+/* RESEAUX SOCIAUX */
+/* ===================== */
 #rs{
     background-color: violet;
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 50px;
     padding: 20px;
     flex-wrap: wrap;
 }
@@ -108,9 +133,20 @@ nav a:hover{
     transform: scale(1.2);
 }
 
-/* MA VISION */
+/* ===================== */
+/* SECTION VISION */
+/* ===================== */
+h2{
+    background-color: darkviolet;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    margin-top: 30px;
+}
+
 .monblock{
-    margin: 30px 20px;
+    max-width: 1000px;
+    margin: 40px auto;
     padding: 30px;
     background-color: white;
     border-radius: 15px;
@@ -118,139 +154,82 @@ nav a:hover{
 
 .monblock p{
     text-align: center;
-    width: 100%;
+    color: black;
 }
 
-/* TITRES */
-h1{
-    font-family: "Comic Sans MS";
-    font-style: italic;
-}
-
-h2{
-    background-color: darkviolet;
-    text-align: center;
-    padding: 10px;
-    color: white;
-}
-
+/* ===================== */
+/* HOBBIES */
+/* ===================== */
 h3{
     color: white;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 ul{
-    padding: 20px;
-    margin: 0 20px 40px;
+    max-width: 800px;
+    margin: 30px auto 50px;
     background: white;
+    padding: 20px;
     border-radius: 10px;
+    color: black;
 }
 
+/* ===================== */
 /* RESPONSIVE MOBILE */
+/* ===================== */
 @media (max-width: 768px){
 
     .cc{
         flex-direction: column;
         text-align: center;
+        gap: 30px;
     }
 
     #moi{
         font-size: 1.5rem;
     }
 
-    nav{
-        gap: 20px;
-    }
-
     .avatar img{
         max-width: 250px;
     }
+
+    nav{
+        gap: 20px;
+    }
 }
 
-/* ========================= */
+/* ===================== */
 /* RESPONSIVE TABLETTE */
-/* ========================= */
-@media (min-width: 768px) and (max-width: 1024px){
+/* ===================== */
+@media (min-width: 769px) and (max-width: 1024px){
+
+    .avatar img{
+        max-width: 300px;
+    }
 
     .cc{
         gap: 40px;
-        padding: 20px;
-    }
-
-    .avatar img{
-        width: 300px;
-    }
-
-    #moi{
-        font-size: 1.8rem;
-    }
-
-    .monblock{
-        margin: 40px;
-    }
-
-    ul{
-        margin: 30px;
     }
 }
 
+/* ===================== */
+/* GRAND ECRAN */
+/* ===================== */
+@media (min-width: 1400px){
 
-/* ========================= */
-/* RESPONSIVE PC STANDARD */
-/* ========================= */
-@media (min-width: 1025px){
-
-    /* Centre le contenu */
     .cc{
         max-width: 1200px;
-        margin: 50px auto;
-    }
-
-    .monblock{
-        max-width: 1000px;
         margin: 60px auto;
     }
 
-    ul{
-        max-width: 800px;
-        margin: 40px auto;
-    }
-
-    /* Image plus proportionnelle */
     .avatar img{
-        width: 350px;
+        max-width: 450px;
     }
-
-    /* Espace mieux réparti */
-    #rs{
-        gap: 60px;
-        padding: 20px;
-    }
-}
-
-
-/* ========================= */
-/* GRAND ECRAN (1920px+) */
-/* ========================= */
-@media (min-width: 1600px){
 
     body{
         font-size: 18px;
     }
-
-    .cc{
-        gap: 80px;
-    }
-
-    .avatar img{
-        width: 450px;
-    }
-
-    .monblock{
-        max-width: 1200px;
-    }
 }
-
 
 
