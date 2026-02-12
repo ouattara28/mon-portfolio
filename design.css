@@ -168,4 +168,89 @@ ul{
     }
 }
 
+/* ========================= */
+/* RESPONSIVE TABLETTE */
+/* ========================= */
+@media (min-width: 768px) and (max-width: 1024px){
+
+    .cc{
+        gap: 40px;
+        padding: 20px;
+    }
+
+    .avatar img{
+        width: 300px;
+    }
+
+    #moi{
+        font-size: 1.8rem;
+    }
+
+    .monblock{
+        margin: 40px;
+    }
+
+    ul{
+        margin: 30px;
+    }
+}
+
+
+/* ========================= */
+/* RESPONSIVE PC STANDARD */
+/* ========================= */
+@media (min-width: 1025px){
+
+    /* Centre le contenu */
+    .cc{
+        max-width: 1200px;
+        margin: 50px auto;
+    }
+
+    .monblock{
+        max-width: 1000px;
+        margin: 60px auto;
+    }
+
+    ul{
+        max-width: 800px;
+        margin: 40px auto;
+    }
+
+    /* Image plus proportionnelle */
+    .avatar img{
+        width: 350px;
+    }
+
+    /* Espace mieux réparti */
+    #rs{
+        gap: 60px;
+        padding: 20px;
+    }
+}
+
+
+/* ========================= */
+/* GRAND ECRAN (1920px+) */
+/* ========================= */
+@media (min-width: 1600px){
+
+    body{
+        font-size: 18px;
+    }
+
+    .cc{
+        gap: 80px;
+    }
+
+    .avatar img{
+        width: 450px;
+    }
+
+    .monblock{
+        max-width: 1200px;
+    }
+}
+
+
 
