@@ -106,10 +106,27 @@ h1{
 }
 
 .avatar img{
-    width: 100%;
-    max-width: 400px;
-    border-radius: 20px;
+    width: 200px;
+    height:200px;
+    border-radius: 50%;
+    object-fit: cover;
     opacity: 0.9;
+    display: flex;
+    justify-content: flex-end;
+    box-shadow: 0 0 15px rgba(255,255,255,1);
+    animation:avatar 4s ease-in-out infinite;
+}
+
+@keyframes avatar {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
 }
 
 /* ===================== */
