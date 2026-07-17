@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ouattara28.github.io/mon-portfolio/sitemap.xml

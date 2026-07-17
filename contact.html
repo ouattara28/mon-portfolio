@@ -3,35 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio de ismael</title>
+    <title>Contact — Ouattara Ismael Ali</title>
+    <meta name="description" content="Contactez Ouattara Ismael Ali pour une mission, une collaboration ou une opportunité.">
     <link rel="stylesheet" href="design.css">
 </head>
 <body>
-<nav>
-    <a href="formation.html">formation</a>
-    <a href="competence.html">competence</a>
-    <a href="projet profesionnel.html">projet profesionnel</a>
-    <a href="contact.html">contact</a>
+<nav id="navigation">
+    <a href="index.html">Accueil</a>
+    <a href="formation.html">Formation</a>
+    <a href="competence.html">Compétences</a>
+    <a href="projet-professionnel.html">Projets</a>
+    <a href="contact.html">Contact</a>
 </nav>
 
- <div class="monblock">
-     <p>
-         Disponible pour des missions, collaborations ou opportunités.
-         N'hésitez pas à me contacter 👇
-     </p>
-     <ul>
-         <li>tel:+225 05 0576956529</li>
-         <li>mail:<a href="mailto:ouattaraismael20144@gmail.com?subject=Projet&body=Bonjour, j'aimerais discuter d'un projet avec vous">
-             ouattaraismael20144@gmail.com
-         </a>
-         </li>
-     </ul>
- </div>
+<main>
+    <div class="monblock">
+        <p>
+            Disponible pour des missions, collaborations ou opportunités.
+            N'hésitez pas à me contacter 👇
+        </p>
+        <ul class="contact-list">
+            <li>📞 <a href="tel:+2250576956529">+225 05 76 95 65 29</a></li>
+            <li>✉️ <a href="mailto:ouattaraismael20144@gmail.com?subject=Projet&body=Bonjour, j'aimerais discuter d'un projet avec vous">
+                ouattaraismael20144@gmail.com
+            </a></li>
+        </ul>
+    </div>
 
-<form  class="monblock" action="">
-    <input type="text" placeholder="Votre nom" required>
-    <input type="email" placeholder="Votre email" required>
-    <textarea placeholder="Votre message" required></textarea>
-    <button type="submit">Envoyer</button>
-</form>
+    <form id="contact-form" class="monblock" action="https://formspree.io/f/REMPLACER_PAR_VOTRE_ID" method="POST">
+        <label for="name">Votre nom</label>
+        <input id="name" name="name" type="text" placeholder="Votre nom" required autocomplete="name">
+
+        <label for="email">Votre email</label>
+        <input id="email" name="email" type="email" placeholder="Votre email" required autocomplete="email">
+
+        <label for="message">Votre message</label>
+        <textarea id="message" name="message" placeholder="Votre message" required></textarea>
+
+        <!-- Honeypot anti-spam (champ invisible, ne pas afficher) -->
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
+        <button type="submit">Envoyer</button>
+    </form>
+    <p id="form-status" class="form-status" role="status"></p>
+</main>
+
+<footer>
+    &copy; <span id="year"></span> Ouattara Ismael Ali — Tous droits réservés
+</footer>
+
+<script src="script.js" defer></script>
 </body>
+</html>
