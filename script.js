@@ -40,15 +40,33 @@ function attachLinkTransitions() {
     });
 }
 
+function closeMobileNav() {
+    const nav = document.querySelector('nav#navigation');
+    const toggleButton = document.querySelector('.nav-toggle');
+    if (!nav || !nav.classList.contains('open')) {
+        return;
+    }
+
+    nav.classList.remove('open');
+    document.body.classList.remove('js');
+    if (toggleButton) {
+        toggleButton.setAttribute('aria-expanded', 'false');
+    }
+}
+
 function initMobileNav() {
-    const nav = document.querySelector('nav');
+    const nav = document.querySelector('nav#navigation') || document.querySelector('nav');
     if (!nav) return;
+
+    if (!nav.id) {
+        nav.id = 'navigation';
+    }
 
     const toggleButton = document.createElement('button');
     toggleButton.type = 'button';
     toggleButton.className = 'nav-toggle';
     toggleButton.textContent = 'Menu';
-    toggleButton.setAttribute('aria-controls', 'navigation');
+    toggleButton.setAttribute('aria-controls', nav.id);
     toggleButton.setAttribute('aria-expanded', 'false');
 
     const navParent = nav.parentNode;
@@ -61,6 +79,16 @@ function initMobileNav() {
         document.body.classList.toggle('js', isOpen);
         toggleButton.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     });
+
+    nav.querySelectorAll('a[href]').forEach(link => {
+        link.addEventListener('click', closeMobileNav);
+    });
+
+    window.addEventListener('scroll', () => {
+        if (window.innerWidth <= 480) {
+            closeMobileNav();
+        }
+    }, { passive: true });
 }
 
 function handleReducedMotion() {
